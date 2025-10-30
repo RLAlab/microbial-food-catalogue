@@ -1,0 +1,20 @@
+﻿Database ;Description ;Link / reference
+Periodic Table of Food Initiative (PTFI) ;20,000+ food compounds across diverse food types. ;https://foodperiodictable.org/ 
+FlavorDB2;Most comprehensive repository of flavor compounds, containing over 25,000 molecules;https://cosylab.iiitd.edu.in/flavordb2/
+Taste of Industy 2025 (NECTAR);Insights from blind taste tests with 2,684 omnivores on 122 products across 14 categories;https://www.nectar.org/research/2025-taste-of-the-industry
+FooDB ;60,000 food-derived molecules with details on flavours, nutrients, and metabolites ;https://foodb.ca/ 
+OpenFoodTox (EFSA) ;4,000+ chemicals and their toxicological risk assessments in food safety. ;https://efsa.onlinelibrary.wiley.com/doi/10.2903/sp.efsa.2021.EN-6476 
+Omics Database of Fermentative Microbes (ODFM) ;3,755 omics datasets, including genome, metagenome, metataxonome, and (meta)transcriptome sequences for microorganisms found in fermented foods, additives, and seasonings. ;https://www.nature.com/articles/s41597-021-00895-x 
+curated Food Metagenomic Data (cFMD) ;1,950 newly sequenced food metagenomes and 583 publicly available ones ;https://www.sciencedirect.com/science/article/pii/S009286742400833X?via%3Dihub 
+NutrigenomeDB ;Gene expression data from 230 nutrigenomics experiments ;https://nutrigenomedb.org/ 
+ImpactDB ;Fermentation performance data (titer/rate/yield), strain genetic modifications, and bioprocess conditions from ~7,500 publications ;https://impact-database.com
+PhenolExplorer;Comprehensive database on polyphenol content in foods for over 35,000 content values for 500 polyphenols in over 400 foods. Information on polyphenol metabolism and data on the effects of food processing and cooking;http://phenol-explorer.eu/
+Natural Product Atlas;Database of all small molecules discovered from bacteria and fungi, with over 36,000 compounds ;https://www.npatlas.org/
+PhytoHub;Database containing around 1,200 polyphenols, terpenoids, alkaloids and other plant secondary metabolites present in commonly consumed foods, with information about dietary phytochemicals and their human and animal metabolites.;https://phytohub.eu/
+PRIDE (Proteomics Identification Database);Over 40,000 mass spectrometry proteomics data, including protein and peptide identifications and the corresponding expression values, post-translational modifications and supporting mass spectra evidence;https://www.ebi.ac.uk/pride/
+Metabolomics Workbench;Houses over 1,800 studies and 100,000+ identified metabolites.;https://www.metabolomicsworkbench.org/
+JGI MycoCosm;Fungal genome database with over 2,500 sequenced fungal genomes, valuable for optimizing fungal strains.;https://mycocosm.jgi.doe.gov/mycocosm/home
+ThermoBase;A thermodynamics-based database with enzyme kinetics and stability data.;https://togodb.org/db/thermobase
+FAO/WHO GIFT (Global Individual Food Consumption Data Tool);Contains global food consumption data across 100+ countries.;https://www.fao.org/gift-individual-food-consumption/en/
+GenomeTrakr Network (FDA);An international genomic reference database containing whole-genome sequences of foodborne pathogens and environmental isolates.;https://www.fda.gov/food/whole-genome-sequencing-wgs-program/genometrakr-network
+Food-475 Database;Largest public food image database, supporting AI-based food recognition and classification;http://www.ivl.disco.unimib.it/activities/food475db/
