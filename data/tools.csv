@@ -1,1 +1,25 @@
-
+Broad scope;Name;Algorithm type;Datasets used;Reference
+Taste compound prediction;VirtuousMulti Taste;Random Forest with multi-objective evolutionary optimization;"Trained on 360 compounds per class; tested on a larger external datasets, including: FooDB, FlavorDB, PhenolExplorer, Natural Product Atlas, PhytoHub";Androutsos et al. (2024)
+Protein digestibility prediction;//;Transformer protein language model with SHAP for feature selection;"Trained on 189 food items with 1671 features (nutritional data, amino acid composition, protein sequences); tested on 7 food items from diverse sources";Malvar et al. (2022)
+Protein engineering;Pro-PRIME;Protein language model;Optimal growth temperatures from 96 million host bacterial strains + thermostability data from creatinase (18 single‐point mutants, 22 double‐point mutants, 21;Bian et al. (2024)
+;;; triple‐point mutants, and 12 quadruple‐point mutants) for fine-tuning ;
+;ESM-2;Transformer protein language model;Trained on 250 million protein sequences from UniRef50;Lin et al. (2023)
+;Evo;Long-context transformer model;Trained on the OpenGenome dataset (80,000 bacterial and archaeal genomes and millions of predicted phage and plasmid sequences);Nguyen et al. (2024)
+;EvoProtGrad;Gradient-based discrete MCMC;"Utilizes pretrained protein language models; tested on various fitness landscapes. ";Emami et al. (2023)
+;AlphaMissense;Deep learning model;Fine-tuned on human and primate variant frequency databases, including ClinVar, to predict the pathogenicity of missense variants .;Cheng et al. (2023)
+;AlphaFold;Deep neural network;Trained on protein structures from the Protein Data Bank (PDB) and multiple sequence alignments. The AlphaFold Protein Structure Database contains over 200 million predicted structures .;Jumper et al. (2021)
+;AlphaFold3;Diffusion-based deep learning model;Trained on biomolecular complexes, including proteins, nucleic acids, and small molecules from Protein Data Bank (PDB).;Abramson et al. (2024)
+;ESMFold;Transformer-based model;Trained on 250 million protein sequences from UniRef50;Lin et al. (2023)
+;RoseTTAFold;Three-track neural network;Trained on protein structures from the Protein Data Bank (PDB) and multiple sequence alignments. Evaluated on 69 medium and hard targets in the CAMEO benchmark .;Baek et al. (2021)
+;RFDiffusion;Diffusion generative model;Fine-tuned on protein structure denoising tasks using the RoseTTAFold architecture.;Watson et al. (2023)
+;ProteinMPNN;Deep neural network;Trained on protein structures from the Protein Data Bank as of August 2021, focusing on sequence optimization.;Dauparas et al. (2022)
+;LigandMPNN;Deep neural network;Trained on protein-ligand complexes from the PDB as of December 2022, modeling non-protein components explicitly .;Dauparas et al. (2025)
+;ThermoMPNN;Deep neural network;Trained on a mega-scale dataset of over 200,000 data points to predict stability changes upon mutations .;Dieckhaus et al. (2024)
+Template-free retrobiosynthesis;BioNavi-NP;Transformer neural network;33710 biochemical reactions from MetaCyc and KEGG + 60k natural product-like organic reactions from USPTO db. Test set (internal): 368 target molecules with complete biosynthetic pathways + test set (external): 25 unseen natural products;Zheng et al. (2022)
+;//;Transformer neural network + transfer learning;1M organic chemical reactions from USPTO db + 56579 curated enzymatic reactions from ECREACT db.;Probst et al. (2022)
+Metabolic engineering and modeling ;ARCTICA;Logistic regression + L1 regularisation (LASSO);100k sample points per virtual phenotype (low- and high-producing Synechocystis sp. PCC 6803 strains) per each bioproduct (lauric acid, squalene, L-leucine, biomass) using Monte Carlo flux sampling.;Kugler et al.(2024)
+;AMN (Artificial Metabolic Network);Hybrid neural-mechanistic model (ANN + FBA surrogate solvers: Wt, LP, QP);"FBA-simulated datasets (~1000 samples on E. coli core and iML1515 models); experimental datasets: 110 growth rates (E. coli), 17,400 growth rates (E. coli KOs), 296 growth assays (P. putida)";Faure et al. (2023)
+;ART;Bayesian ensemble model;Simulated data (16 instances) and experimental datasets—including proteomics and production levels from 27 limonene strains, 50 beer-flavor strains, and 116 dodecanol replicates across 33 strains;Radivojević et al. (2020)
+;MiYA;ANN ensemble;Experimental datasets from S. cerevisiae engineered for β-carotene (24 strains with promoter combinations and titers) and violacein (24 pre-screened strains with promoter combinations, titers, and purity metrics);Zhou et al. (2018)
+;REKINDLE;Conditional Generative Adversarial Network (GAN);72,000 unique combinations of 411 kinetic parameters from E. coli metabolism, generated using the ORACLE framework;Choudhury et al. 
+Downstream processing;Generative Flowsheet Transformer;Transformer-based language model;Trained on synthetic (8,000+) and real flowsheets (223);Vogel et al. 2023
