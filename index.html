@@ -167,8 +167,10 @@
                         // Add HTML to the table
                         $('#' + tableId).html(headerHtml + bodyHtml);
 
-                        // Initialize DataTables
-                        $('#' + tableId).DataTable();
+                        // Initialize DataTables, with initial sorting disabled
+                        $('#' + tableId).DataTable({
+                            "order": []
+                        });
                     }
                 });
             }
