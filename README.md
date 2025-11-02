@@ -1,6 +1,6 @@
 # Microbial Food Innovation Catalogue
 
-[![GitHub Pages](https://img.shields.io/github/deployments/YOUR-USERNAME/YOUR-REPO-NAME/github-pages?label=Website&style=flat-square)](https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/)
+[![GitHub Pages][(https://img.shields.io/github/deployments/YOUR-USERNAME/YOUR-REPO-NAME/github-pages?label=Website&style=flat-square)](https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/)](https://rlalab.org/microbial-food-innovation-catalogue/)
 
 This repository hosts an open-source, continuously updated catalogue of databases and computational tools relevant to microbial food innovation.
 
