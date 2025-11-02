@@ -2,13 +2,12 @@
 
 [![GitHub Pages](https://img.shields.io/github/deployments/YOUR-USERNAME/YOUR-REPO-NAME/github-pages?label=Website&style=flat-square)](https://rlalab.org/microbial-food-innovation-catalogue/)
 
-This repository hosts an open-source, continuously updated catalogue of databases and computational tools relevant to microbial food innovation.
-
-It is a companion resource to our perspective on the **AI Agenda for Microbial Foods**, designed to support researchers, accelerate development, and help coordinate progress in the field.
+This repository hosts an open-source catalogue of databases and computational tools relevant to microbial food innovation.
+It is a companion resource to the perspective on the **AI Agenda for Microbial Foods**, designed to support researchers, accelerate development, and help coordinate progress in the field.
 
 ## 🚀 View the Live Catalogue
 
-The data in this repository is used to generate an interactive website. For the best experience, please **[view the live, searchable catalogue here](https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/)**.
+The data in this repository is used to generate an interactive website. For the best experience, please **[view the live, searchable catalogue here](https://rlalab.org/microbial-food-innovation-catalogue/)**.
 
 The website allows you to:
 * Search all tables instantly
@@ -39,14 +38,16 @@ This is a community-driven project. We welcome and encourage contributions to ke
 
 This will create a "Pull Request," which we will review and merge.
 
-Alternatively, if you find a bug or have a suggestion, please [open an issue](https://github.com/YOUR-USERNAME/YOUR-REPO-NAME/issues).
+Alternatively, if you find a bug or have a suggestion, please [open an issue](https://github.com/RLAlab/microbial-food-innovation-catalogue/issues).
 
-## 📜 How to Cite
+<!---
+### 📜 How to Cite
 
 If you find this catalogue useful in your research, please cite our publication:
 
-> **Your Name, et al. (2025). "The AI Agenda for Microbial Foods." *Journal of Amazing Food Science*, 1(1), 1-10.**
-> **DOI: [http://dx.doi.org/YOUR-DOI-HERE](http://dx.doi.org/YOUR-DOI-HERE)**
+> **Del Missier, et al. (2025). "From Strain to Shelf: An AI Agenda for Microbial Food Innovation"
+> **DOI: **
+--->
 
 ## ⚖️ License
 
