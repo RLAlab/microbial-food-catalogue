@@ -1,24 +1,24 @@
-Broad scope,Name,Algorithm,Datasets,Reference,DOI
-Taste compound prediction,VirtuousMulti Taste,Random Forest with multi-objective evolutionary optimization,"Trained on 360 compounds per class; tested on a larger external datasets, including: FooDB, FlavorDB, PhenolExplorer, Natural Product Atlas, PhytoHub",Androutsos et al. (2024),10.1038/s42256-024-00913-6
-Protein digestibility prediction,//,Transformer protein language model with SHAP for feature selection,"Trained on 189 food items with 1671 features (nutritional data, amino acid composition, protein sequences); tested on 7 food items from diverse sources",Malvar et al. (2022),10.48550/arXiv.2210.14227
-Protein engineering,Pro-PRIME,Protein language model,Optimal growth temperatures from 96 million host bacterial strains + thermostability data for fine-tuning,Bian et al. (2024),10.1038/s41587-024-02206-8
-Protein engineering,ESM-2,Transformer protein language model,Trained on 250 million protein sequences from UniRef50,Lin et al. (2023),10.1126/science.add3019
-Protein engineering,Evo,Long-context transformer model,Trained on the OpenGenome dataset,Nguyen et al. (2024),10.1038/s41586-024-07612-4
-Protein engineering,EvoProtGrad,Gradient-based discrete MCMC,Utilizes pretrained protein language models,Emami et al. (2023),10.1038/s41587-023-02058-9
-Protein engineering,AlphaMissense,Deep learning model,Fine-tuned on human and primate variant frequency databases,Cheng et al. (2023),10.1126/science.adg7492
-Protein engineering,AlphaFold,Deep neural network,Trained on protein structures from the PDB,Jumper et al. (2021),10.1038/s41586-021-03819-2
-Protein engineering,AlphaFold3,Diffusion-based deep learning model,Trained on biomolecular complexes from PDB,Abramson et al. (2024),10.1038/s41586-024-07484-1
-Protein engineering,ESMFold,Transformer-based model,Trained on 250 million protein sequences from UniRef50,Lin et al. (2023),10.1126/science.add3019
-Protein engineering,RoseTTAFold,Three-track neural network,Trained on protein structures from the PDB,Baek et al. (2021),10.1126/science.abg6170
-Protein engineering,RFDiffusion,Diffusion generative model,Fine-tuned on protein structure denoising tasks,Watson et al. (2023),10.1038/s41592-023-02079-5
-Protein engineering,ProteinMPNN,Deep neural network,Trained on protein structures from the PDB,Dauparas et al. (2022),10.1126/science.add2191
-Protein engineering,LigandMPNN,Deep neural network,Trained on protein-ligand complexes from the PDB,Dauparas et al. (2025),10.1038/s41592-024-02553-y
-Protein engineering,ThermoMPNN,Deep neural network,Trained on a mega-scale dataset,Dieckhaus et al. (2024),10.1073/pnas.2314853121
-Template-free retrobiosynthesis,BioNavi-NP,Transformer neural network,"33710 biochemical reactions from MetaCyc and KEGG, etc.",Zheng et al. (2022),10.1038/s41467-022-34863-7
-Template-free retrobiosynthesis,//,Transformer neural network + transfer learning,"1M organic chemical reactions from USPTO db, etc.",Probst et al. (2022),10.1038/s41467-022-31991-3
-Metabolic engineering and modeling,ARCTICA,Logistic regression + L1 regularisation (LASSO),Simulated data on Synechocystis sp. PCC 6803 strains,Kugler et al.(2024),10.1016/j.ymben.2024.01.006
-Metabolic engineering and modeling,AMN (Artificial Metabolic Network),"Hybrid neural-mechanistic model (ANN + FBA surrogate solvers: Wt, LP, QP)",FBA-simulated and experimental datasets,Faure et al. (2023),10.1038/s41467-023-40291-y
-Metabolic engineering and modeling,ART,Bayesian ensemble model,Simulated and experimental datasets (limonene, beer-flavor, dodecanol strains),Radivojević et al. (2020),10.1016/j.ymben.2020.10.005
-Metabolic engineering and modeling,MiYA,ANN ensemble,"Experimental datasets (S. cerevisiae engineered for β-carotene and violacein)",Zhou et al. (2018),10.1186/s12934-018-1033-9
-Metabolic engineering and modeling,REKINDLE,Conditional Generative Adversarial Network (GAN),72,000 unique combinations of kinetic parameters from E. coli metabolism,"Choudhury et al.",10.1038/s42256-022-00519-y
-Downstream processing,Generative Flowsheet Transformer,Transformer-based language model,Trained on synthetic (8,000+) and real flowsheets (223),"Vogel et al. 2023",10.1016/j.compchemeng.2023.108162
+"Broad scope","Name","Algorithm","Datasets","Reference"
+"Taste compound prediction","VirtuousMulti Taste","Random Forest with multi-objective evolutionary optimization","Trained on 360 compounds per class; tested on a larger external datasets, including: FooDB, FlavorDB, PhenolExplorer, Natural Product Atlas, PhytoHub","Androutsos et al. (2024)"
+"Protein digestibility prediction","//","Transformer protein language model with SHAP for feature selection","Trained on 189 food items with 1671 features (nutritional data, amino acid composition, protein sequences); tested on 7 food items from diverse sources","Malvar et al. (2022)"
+"Protein engineering","Pro-PRIME","Protein language model","Optimal growth temperatures from 96 million host bacterial strains + thermostability data for fine-tuning","Bian et al. (2024)"
+"Protein engineering","ESM-2","Transformer protein language model","Trained on 250 million protein sequences from UniRef50","Lin et al. (2023)"
+"Protein engineering","Evo","Long-context transformer model","Trained on the OpenGenome dataset","Nguyen et al. (2024)"
+"Protein engineering","EvoProtGrad","Gradient-based discrete MCMC","Utilizes pretrained protein language models","Emami et al. (2023)"
+"Protein engineering","AlphaMissense","Deep learning model","Fine-tuned on human and primate variant frequency databases","Cheng et al. (2023)"
+"Protein engineering","AlphaFold","Deep neural network","Trained on protein structures from the PDB","Jumper et al. (2021)"
+"Protein engineering","AlphaFold3","Diffusion-based deep learning model","Trained on biomolecular complexes from PDB","Abramson et al. (2024)"
+"Protein engineering","ESMFold","Transformer-based model","Trained on 250 million protein sequences from UniRef50","Lin et al. (2023)"
+"Protein engineering","RoseTTAFold","Three-track neural network","Trained on protein structures from the PDB","Baek et al. (2021)"
+"Protein engineering","RFDiffusion","Diffusion generative model","Fine-tuned on protein structure denoising tasks","Watson et al. (2023)"
+"Protein engineering","ProteinMPNN","Deep neural network","Trained on protein structures from the PDB","Dauparas et al. (2022)"
+"Protein engineering","LigandMPNN","Deep neural network","Trained on protein-ligand complexes from the PDB","Dauparas et al. (2025)"
+"Protein engineering","ThermoMPNN","Deep neural network","Trained on a mega-scale dataset","Dieckhaus et al. (2024)"
+"Template-free retrobiosynthesis","BioNavi-NP","Transformer neural network","33710 biochemical reactions from MetaCyc and KEGG, etc.","Zheng et al. (2022)"
+"Template-free retrobiosynthesis","//","Transformer neural network + transfer learning","1M organic chemical reactions from USPTO db, etc.","Probst et al. (2022)"
+"Metabolic engineering and modeling","ARCTICA","Logistic regression + L1 regularisation (LASSO)","Simulated data on Synechocystis sp. PCC 6803 strains","Kugler et al.(2024)"
+"Metabolic engineering and modeling","AMN (Artificial Metabolic Network)","Hybrid neural-mechanistic model (ANN + FBA surrogate solvers: Wt, LP, QP)","FBA-simulated and experimental datasets","Faure et al. (2023)"
+"Metabolic engineering and modeling","ART","Bayesian ensemble model","Simulated and experimental datasets (limonene, beer-flavor, dodecanol strains)","Radivojević et al. (2020)"
+"Metabolic engineering and modeling","MiYA","ANN ensemble","Experimental datasets (S. cerevisiae engineered for β-carotene and violacein)","Zhou et al. (2018)"
+"Metabolic engineering and modeling","REKINDLE","Conditional Generative Adversarial Network (GAN)","72,000 unique combinations of kinetic parameters from E. coli metabolism","Choudhury et al."
+"Downstream processing","Generative Flowsheet Transformer","Transformer-based language model","Trained on synthetic (8,000+) and real flowsheets (223)","Vogel et al. 2023"
