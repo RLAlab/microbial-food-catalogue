@@ -150,12 +150,27 @@
                                 let cellData = row[header] || ""; // Handle undefined/null
                                 let colName = header.toLowerCase();
                                 
-                                // NEW: Improved link detection. Checks for 'link' or 'url' in header.
-                                // It also checks if the cellData is a non-empty string that starts with http.
+// Check if it's a link column and has http
                                 if ((colName.includes('link') || colName.includes('url')) && 
-                                    typeof cellData === 'string' && cellData.startsWith('http')) {
+                                    typeof cellData === 'string' && cellData.includes('http')) {
                                     
-                                    bodyHtml += `<td><a href="${cellData}" target="_blank" rel="noopener">${cellData} <i class="bi bi-box-arrow-up-right"></i></a></td>`;
+                                    // Check for multiple links separated by '|'
+                                    if (cellData.includes('|')) {
+                                        const links = cellData.split('|');
+                                        let html = '<ul style="margin-bottom: 0; padding-left: 20px;">';
+                                        links.forEach(link => {
+                                            const trimmedLink = link.trim();
+                                            if (trimmedLink.startsWith('http')) {
+                                                 html += `<li><a href="${trimmedLink}" target="_blank" rel="noopener">${trimmedLink} <i class="bi bi-box-arrow-up-right"></i></a></li>`;
+                                            }
+                                        });
+                                        html += '</ul>';
+                                        bodyHtml += `<td>${html}</td>`;
+                                    } else {
+                                        // Original logic for single links
+                                        bodyHtml += `<td><a href="${cellData}" target="_blank" rel="noopener">${cellData} <i class="bi bi-box-arrow-up-right"></i></a></td>`;
+                                    }
+                                
                                 } else {
                                     bodyHtml += '<td>' + cellData + '</td>';
                                 }
