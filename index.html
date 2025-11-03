@@ -1,192 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Microbial Food Innovation Catalogue</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-    
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        .wrapper {
-            flex: 1;
-            padding-top: 2rem;
-            padding-bottom: 4rem;
-        }
-        .dataTables_wrapper {
-            margin-top: 1.5rem;
-        }
-        /* Make tab content have a bit of space */
-        .tab-content {
-            padding-top: 1.5rem;
-            border: 1px solid #dee2e6;
-            border-top: 0;
-            padding: 1.5rem;
-            border-radius: 0 0 0.375rem 0.375rem;
-        }
-        .footer {
-            padding: 2rem 0;
-            background-color: #f8f9fa;
-            font-size: 0.9rem;
-            color: #6c757d;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microbial Food Innovation Catalogue</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .wrapper {
+            flex: 1;
+            padding-top: 2rem;
+            padding-bottom: 4rem;
+        }
+        .dataTables_wrapper {
+            margin-top: 1.5rem;
+        }
+        /* Make tab content have a bit of space */
+        .tab-content {
+            padding-top: 1.5rem;
+            border: 1px solid #dee2e6;
+            border-top: 0;
+            padding: 1.5rem;
+            border-radius: 0 0 0.375rem 0.375rem;
+        }
+        .footer {
+            padding: 2rem 0;
+            background-color: #f8f9fa;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+    </style>
 </head>
 <body>
 
-    <div class="wrapper">
-        <div class="container">
-            
-            <div class="mb-4 p-5 bg-light rounded-3">
-                <div class="container-fluid py-3">
-                    <h1 class="display-5 fw-bold">Microbial Food Innovation Catalogue</h1>
-                    <p class="col-md-10 fs-4">An open-source catalogue of databases and computational tools to support the AI-driven acceleration of microbial food development.</p>
-                    <p class="text-muted">This resource supports the AI Agenda for Microbial Foods. 
-                        <a href="https://github.com/RLAlab/microbial-food-innovation-catalogue" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
-                            <i class="bi bi-github"></i> View on GitHub
-                        </a>
-                    </p>
-                </div>
-            </div>
+    <div class="wrapper">
+        <div class="container">
+            
+            <div class="mb-4 p-5 bg-light rounded-3">
+                <div class="container-fluid py-3">
+                    <h1 class="display-5 fw-bold">Microbial Food Innovation Catalogue</h1>
+                    <p class="col-md-10 fs-4">An open-source catalogue of databases and computational tools to support the AI-driven acceleration of microbial food development.</p>
+                    <p class="text-muted">This resource supports the AI Agenda for Microbial Foods. 
+                        <a href="https://github.com/RLAlab/microbial-food-innovation-catalogue" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+                            <i class="bi bi-github"></i> View on GitHub
+                        </a>
+                    </p>
+                </div>
+            </div>
 
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="databases-tab" data-bs-toggle="tab" data-bs-target="#databases-pane" type="button" role="tab" aria-controls="databases-pane" aria-selected="true">Databases</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="tools-tab" data-bs-toggle="tab" data-bs-target="#tools-pane" type="button" role="tab" aria-controls="tools-pane" aria-selected="false">Computational Tools</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="about-tab" data-bs-toggle="tab" data-bs-target="#about-pane" type="button" role="tab" aria-controls="about-pane" aria-selected="false">About & Contribute</button>
-                </li>
-            </ul>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="databases-tab" data-bs-toggle="tab" data-bs-target="#databases-pane" type="button" role="tab" aria-controls="databases-pane" aria-selected="true">Databases</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="tools-tab" data-bs-toggle="tab" data-bs-target="#tools-pane" type="button" role="tab" aria-controls="tools-pane" aria-selected="false">Computational Tools</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="about-tab" data-bs-toggle="tab" data-bs-target="#about-pane" type="button" role="tab" aria-controls="about-pane" aria-selected="false">About & Contribute</button>
+                </li>
+            </ul>
 
-            <div class="tab-content" id="myTabContent">
-                
-                <div class="tab-pane fade show active" id="databases-pane" role="tabpanel" aria-labelledby="databases-tab">
-                    <table id="databases-table" class="table table-striped" style="width:100%">
-                        </table>
-                </div>
+            <div class="tab-content" id="myTabContent">
+                
+                <div class="tab-pane fade show active" id="databases-pane" role="tabpanel" aria-labelledby="databases-tab">
+                    <table id="databases-table" class="table table-striped" style="width:100%">
+                        </table>
+                </div>
 
-                <div class="tab-pane fade" id="tools-pane" role="tabpanel" aria-labelledby="tools-tab">
-                    <table id="tools-table" class="table table-striped" style="width:100%">
-                        </table>
-                </div>
+                <div class="tab-pane fade" id="tools-pane" role="tabpanel" aria-labelledby="tools-tab">
+                    <table id="tools-table" class="table table-striped" style="width:100%">
+                        </table>
+                </div>
 
-                <div class="tab-pane fade" id="about-pane" role="tabpanel" aria-labelledby="about-tab">
-                    <h3>About This Resource</h3>
-                    <p>Microbial foods offer a sustainable and nutritious alternative to traditional livestock, but their development faces hurdles in sensory performance, scale-up, and safety. Accelerating innovation requires leveraging Artificial Intelligence across the entire development pipeline.</p>
-                    <p>This catalogue is a living resource designed to support researchers by providing a curated list of relevant databases and computational tools. It is intended to support the <b>AI Agenda for Microbial Foods</b>, fostering coordinated progress in food-tailored data, self-driving execution, predictive modelling, and evidence-based translation.</p>
+                <div class="tab-pane fade" id="about-pane" role="tabpanel" aria-labelledby="about-tab">
+                    <h3>About This Resource</h3>
+                    <p>Microbial foods offer a sustainable and nutritious alternative to traditional livestock, but their development faces hurdles in sensory performance, scale-up, and safety. Accelerating innovation requires leveraging Artificial Intelligence across the entire development pipeline.</p>
+                    <p>This catalogue is a living resource designed to support researchers by providing a curated list of relevant databases and computational tools. It is intended to support the <b>AI Agenda for Microbial Foods</b>, fostering coordinated progress in food-tailored data, self-driving execution, predictive modelling, and evidence-based translation.</p>
 
-                    <hr class="my-4">
+                    <hr class="my-4">
 
-                    <h3>How to Contribute</h3>
-                    <p>This is an open-source, community-driven project. We welcome contributions to keep it accurate and comprehensive.</p>
-                    <ol>
-                        <li>Go to the project's <a href="https://github.com/RLAlab/microbial-food-innovation-catalogue" target="_blank" rel="noopener">GitHub repository</a>.</li>
-                        <li>Navigate to the <code>/data/</code> folder and choose either <code>databases.csv</code> or <code>tools.csv</code>.</li>
-                        <li>Click the pencil icon <i class="bi bi-pencil-fill"></i> to edit the file directly on GitHub.</li>
-                        <li>Add your new resource as a new row, following the existing format.</li>
-                        <li>Propose your change by submitting a "Pull Request."</li>
-                    </ol>
-                    <a href="https://github.com/RLAlab/microbial-food-innovation-catalogue/issues" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">
-                        <i class="bi bi-bug"></i> Report an issue or suggest a feature
-                    </a>
-                    
-                    <hr class="my-4">
+                    <h3>How to Contribute</h3>
+                    <p>This is an open-source, community-driven project. We welcome contributions to keep it accurate and comprehensive.</p>
+                    <ol>
+                        <li>Go to the project's <a href="https://github.com/RLAlab/microbial-food-innovation-catalogue" target="_blank" rel="noopener">GitHub repository</a>.</li>
+                        <li>Navigate to the <code>/data/</code> folder and choose either <code>databases.csv</code> or <code>tools.csv</code>.</li>
+                        <li>Click the pencil icon <i class="bi bi-pencil-fill"></i> to edit the file directly on GitHub.</li>
+                        <li>Add your new resource as a new row, following the existing format.</li>
+                        <li>Propose your change by submitting a "Pull Request."</li>
+                    </ol>
+                    <a href="https://github.com/RLAlab/microbial-food-innovation-catalogue/issues" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">
+                        <i class="bi bi-bug"></i> Report an issue or suggest a feature
+                    </a>
+                    
+                    <hr class="my-4">
 </div>
 
-            </div> </div> </div> <footer class="footer mt-auto">
-        <div class="container text-center">
-            <p>A resource from the <a href="https://rlalab.org/" target="_blank" rel="noopener">RLA Lab </a>. Licensed under MIT. Data contributions are CC-BY 4.0.</p>
-        </div>
-    </footer>
+            </div> </div> </div> <footer class="footer mt-auto">
+        <div class="container text-center">
+            <p>A resource from the <a href="https://rlalab.org/" target="_blank" rel="noopener">RLA Lab </a>. Licensed under MIT. Data contributions are CC-BY 4.0.</p>
+        </div>
+    </footer>
 
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 
-    <script>
-        $(document).ready(function() {
-            
-            // Function to load CSV and create a DataTable
-            function createDataTable(csvPath, tableId) {
-                Papa.parse(csvPath, {
-                    download: true,
-                    header: true,
-                    skipEmptyLines: true,
-                    complete: function(results) {
-                        const data = results.data;
-                        const headers = results.meta.fields;
+    <script>
+        $(document).ready(function() {
+            
+            // Function to load CSV and create a DataTable
+            function createDataTable(csvPath, tableId) {
+                Papa.parse(csvPath, {
+                    download: true,
+                    header: true,
+                    skipEmptyLines: true,
+                    complete: function(results) {
+                        const data = results.data;
+                        const headers = results.meta.fields;
 
-                        // Create table headers
-                        let headerHtml = '<thead><tr>';
-                        headers.forEach(header => {
-                            headerHtml += '<th>' + header + '</th>';
+                        const columnDefs = [];
+                        let descriptionIndex = -1;
+
+                        headers.forEach((header, index) => {
+                            const lowerHeader = header.toLowerCase();
+
+                            if (lowerHeader.includes('link') || lowerHeader.includes('url')) {
+                                // Target link/url columns for a small, fixed width
+                                columnDefs.push({
+                                    "targets": index,
+                                    "width": "180px", 
+                                    "orderable": false // Often links are not useful to sort
+                                });
+                            } else if (lowerHeader.includes('description')) {
+                                descriptionIndex = index;
+                            }
                         });
-                        headerHtml += '</tr></thead>';
 
-                        // Create table body
-                        let bodyHtml = '<tbody>';
-                        data.forEach(row => {
-                            bodyHtml += '<tr>';
-                            headers.forEach(header => {
-                                let cellData = row[header] || ""; // Handle undefined/null
-                                let colName = header.toLowerCase();
-                                
-                                // Check if it's a link column and has http
-                                if ((colName.includes('link') || colName.includes('url')) && 
-                                    typeof cellData === 'string' && cellData.includes('http')) {
-                                    
-                                    // Check for multiple links separated by '|'
-                                    if (cellData.includes('|')) {
-                                        const links = cellData.split('|');
-                                        let html = '<ul style="margin-bottom: 0; padding-left: 20px;">';
-                                        links.forEach(link => {
-                                            const trimmedLink = link.trim();
-                                            if (trimmedLink.startsWith('http')) {
-                                                 html += `<li><a href="${trimmedLink}" target="_blank" rel="noopener">${trimmedLink} <i class="bi bi-box-arrow-up-right"></i></a></li>`;
-                                            }
-                                        });
-                                        html += '</ul>';
-                                        bodyHtml += `<td>${html}</td>`;
-                                    } else {
-                                        // Original logic for single links
-                                        bodyHtml += `<td><a href="${cellData}" target="_blank" rel="noopener">${cellData} <i class="bi bi-box-arrow-up-right"></i></a></td>`;
-                                    }
-                                
-                                } else {
-                                    bodyHtml += '<td>' + cellData + '</td>';
-                                }
+                        if (descriptionIndex !== -1) {
+                            // Target the description column for a large portion
+                            columnDefs.push({
+                                "targets": descriptionIndex,
+                                "width": "40%" 
                             });
-                            bodyHtml += '</tr>';
-                        });
-                        bodyHtml += '</tbody>';
+                        }
+                        // -------------------------------------------------
 
-                        // Add HTML to the table
-                        $('#' + tableId).html(headerHtml + bodyHtml);
+                        // Create table headers
+                        let headerHtml = '<thead><tr>';
+                        headers.forEach(header => {
+                            headerHtml += '<th>' + header + '</th>';
+                        });
+                        headerHtml += '</tr></thead>';
 
-                        // Initialize DataTables, with initial sorting disabled
-                        $('#' + tableId).DataTable({
-                            "order": []
-                        });
-                    }
-                });
-            }
+                        // Create table body
+                        let bodyHtml = '<tbody>';
+                        data.forEach(row => {
+                            bodyHtml += '<tr>';
+                            headers.forEach(header => {
+                                let cellData = row[header] || ""; // Handle undefined/null
+                                let colName = header.toLowerCase();
+                                
+                                // Check if it's a link column and has http
+                                if ((colName.includes('link') || colName.includes('url')) && 
+                                    typeof cellData === 'string' && cellData.includes('http')) {
+                                    
+                                    // Check for multiple links separated by '|'
+                                    if (cellData.includes('|')) {
+                                        const links = cellData.split('|');
+                                        let html = '<ul style="margin-bottom: 0; padding-left: 20px;">';
+                                        links.forEach(link => {
+                                            const trimmedLink = link.trim();
+                                            if (trimmedLink.startsWith('http')) {
+                                            // Show only the domain name for multiple links
+                                            let linkLabel = 'Link';
+                                            try {
+                                                const urlObject = new URL(trimmedLink);
+                                                linkLabel = urlObject.hostname.replace('www.', '');
+                                            } catch (e) { /* use default */ }
 
-            // Load the tables
-            createDataTable('data/databases.csv', 'databases-table');
-            createDataTable('data/tools.csv', 'tools-table');
-        });
-    </script>
+                                                 html += `<li><a href="${trimmedLink}" target="_blank" rel="noopener">${linkLabel} <i class="bi bi-box-arrow-up-right"></i></a></li>`;
+                                            }
+                                        });
+                                        html += '</ul>';
+                                        bodyHtml += `<td>${html}</td>`;
+                                    } else {
+                                    // Show only the domain name for a single link
+                                    let linkText = 'Resource Link';
+                                    try {
+                                        const urlObject = new URL(cellData);
+                                        linkText = urlObject.hostname.replace('www.', '');
+                                    } catch (e) { /* use default */ }
+
+                                        // Original logic for single links
+                                        bodyHtml += `<td><a href="${cellData}" target="_blank" rel="noopener">${linkText} <i class="bi bi-box-arrow-up-right"></i></a></td>`;
+                                    }
+                                
+                                } else {
+                                    bodyHtml += '<td>' + cellData + '</td>';
+                                }
+                            });
+                            bodyHtml += '</tr>';
+                        });
+                        bodyHtml += '</tbody>';
+
+                        // Add HTML to the table
+                        $('#' + tableId).html(headerHtml + bodyHtml);
+
+                        // Initialize DataTables, with initial sorting disabled
+                        $('#' + tableId).DataTable({
+                            "order": [],
+                            "columnDefs": columnDefs // Added column width definitions
+                        });
+                    }
+                });
+            }
+
+            // Load the tables
+            createDataTable('data/databases.csv', 'databases-table');
+            createDataTable('data/tools.csv', 'tools-table');
+        });
+    </script>
 </body>
 </html>
