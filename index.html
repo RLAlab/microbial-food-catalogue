@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Microbial Food Innovation Catalogue</title>
-    
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-    
+    
     <style>
         body {
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
+            min-height: 10vh;
         }
         .wrapper {
             flex: 1;
@@ -37,18 +37,31 @@
             font-size: 0.9rem;
             color: #6c757d;
         }
+        
+        /* Custom styles for column widths */
+        #databases-table th:contains("Description"), 
+        #tools-table th:contains("Description") {
+            width: 60% !important;
+        }
+
+        #databases-table th:contains("Link"), 
+        #tools-table th:contains("Link") {
+            width: 15% !important;
+        }
+        /* The .dataTables_wrapper CSS might be needed to override DataTables defaults on the TD/TH elements, 
+            but !important on the TH is the most direct fix for DataTables. */
     </style>
 </head>
 <body>
 
     <div class="wrapper">
         <div class="container">
-            
+            
             <div class="mb-4 p-5 bg-light rounded-3">
                 <div class="container-fluid py-3">
                     <h1 class="display-5 fw-bold">Microbial Food Innovation Catalogue</h1>
                     <p class="col-md-10 fs-4">An open-source catalogue of databases and computational tools to support the AI-driven acceleration of microbial food development.</p>
-                    <p class="text-muted">This resource supports the AI Agenda for Microbial Foods. 
+                    <p class="text-muted">This resource supports the AI Agenda for Microbial Foods. 
                         <a href="https://github.com/RLAlab/microbial-food-innovation-catalogue" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
                             <i class="bi bi-github"></i> View on GitHub
                         </a>
@@ -69,7 +82,7 @@
             </ul>
 
             <div class="tab-content" id="myTabContent">
-                
+                
                 <div class="tab-pane fade show active" id="databases-pane" role="tabpanel" aria-labelledby="databases-tab">
                     <table id="databases-table" class="table table-striped" style="width:100%">
                         </table>
@@ -99,7 +112,7 @@
                     <a href="https://github.com/RLAlab/microbial-food-innovation-catalogue/issues" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">
                         <i class="bi bi-bug"></i> Report an issue or suggest a feature
                     </a>
-                    
+                    
                     <hr class="my-4">
 </div>
 
@@ -117,7 +130,7 @@
 
     <script>
         $(document).ready(function() {
-            
+            
             // Function to load CSV and create a DataTable
             function createDataTable(csvPath, tableId) {
                 Papa.parse(csvPath, {
@@ -127,33 +140,6 @@
                     complete: function(results) {
                         const data = results.data;
                         const headers = results.meta.fields;
-
-                        const columnDefs = [];
-                        let descriptionIndex = -1;
-
-                        headers.forEach((header, index) => {
-                            const lowerHeader = header.toLowerCase();
-
-                            if (lowerHeader.includes('link') || lowerHeader.includes('url')) {
-                                // Target link/url columns for a small, fixed width
-                                columnDefs.push({
-                                    "targets": index,
-                                    "width": "180px", 
-                                    "orderable": false // Often links are not useful to sort
-                                });
-                            } else if (lowerHeader.includes('description')) {
-                                descriptionIndex = index;
-                            }
-                        });
-
-                        if (descriptionIndex !== -1) {
-                            // Target the description column for a large portion
-                            columnDefs.push({
-                                "targets": descriptionIndex,
-                                "width": "40%" 
-                            });
-                        }
-                        // -------------------------------------------------
 
                         // Create table headers
                         let headerHtml = '<thead><tr>';
@@ -169,11 +155,11 @@
                             headers.forEach(header => {
                                 let cellData = row[header] || ""; // Handle undefined/null
                                 let colName = header.toLowerCase();
-                                
+                                
                                 // Check if it's a link column and has http
-                                if ((colName.includes('link') || colName.includes('url')) && 
+                                if ((colName.includes('link') || colName.includes('url')) && 
                                     typeof cellData === 'string' && cellData.includes('http')) {
-                                    
+                                    
                                     // Check for multiple links separated by '|'
                                     if (cellData.includes('|')) {
                                         const links = cellData.split('|');
@@ -181,30 +167,16 @@
                                         links.forEach(link => {
                                             const trimmedLink = link.trim();
                                             if (trimmedLink.startsWith('http')) {
-                                            // Show only the domain name for multiple links
-                                            let linkLabel = 'Link';
-                                            try {
-                                                const urlObject = new URL(trimmedLink);
-                                                linkLabel = urlObject.hostname.replace('www.', '');
-                                            } catch (e) { /* use default */ }
-
-                                                 html += `<li><a href="${trimmedLink}" target="_blank" rel="noopener">${linkLabel} <i class="bi bi-box-arrow-up-right"></i></a></li>`;
+                                                 html += `<li><a href="${trimmedLink}" target="_blank" rel="noopener">${trimmedLink} <i class="bi bi-box-arrow-up-right"></i></a></li>`;
                                             }
                                         });
                                         html += '</ul>';
                                         bodyHtml += `<td>${html}</td>`;
                                     } else {
-                                    // Show only the domain name for a single link
-                                    let linkText = 'Resource Link';
-                                    try {
-                                        const urlObject = new URL(cellData);
-                                        linkText = urlObject.hostname.replace('www.', '');
-                                    } catch (e) { /* use default */ }
-
                                         // Original logic for single links
-                                        bodyHtml += `<td><a href="${cellData}" target="_blank" rel="noopener">${linkText} <i class="bi bi-box-arrow-up-right"></i></a></td>`;
+                                        bodyHtml += `<td><a href="${cellData}" target="_blank" rel="noopener">${cellData} <i class="bi bi-box-arrow-up-right"></i></a></td>`;
                                     }
-                                
+                                
                                 } else {
                                     bodyHtml += '<td>' + cellData + '</td>';
                                 }
@@ -218,8 +190,7 @@
 
                         // Initialize DataTables, with initial sorting disabled
                         $('#' + tableId).DataTable({
-                            "order": [],
-                            "columnDefs": columnDefs // Added column width definitions
+                            "order": []
                         });
                     }
                 });
